@@ -1,0 +1,61 @@
+/* Custom Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+.header-scrolled {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.header-scrolled .header-text {
+    color: #111827; /* gray-900 */
+}
+
+.header-scrolled .header-subtext {
+    color: #4B5563; /* gray-600 */
+}
+
+.header-scrolled .nav-link {
+    color: #374151; /* gray-700 */
+}
+
+.header-scrolled .nav-link:hover {
+    color: #AC8B5C;
+}
+
+.header-scrolled .contact-btn {
+    background-color: #AC8B5C;
+    color: white;
+}
+
+.header-scrolled .contact-btn:hover {
+    background-color: #AC8B5C;
+}
+
+.header-scrolled #mobile-menu-btn {
+    color: #1F2937; /* gray-800 */
+}
+
+/* Animation Utilities */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Counter Animation Class */
+.counter {
+    font-variant-numeric: tabular-nums;
+}

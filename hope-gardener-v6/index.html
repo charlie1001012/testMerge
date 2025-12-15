@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>希望园丁 - 北京市红十字基金会教育专项基金</title>
+    <meta name="description" content="希望园丁致力发展全国优质学校的教育成果展示，教育科学成果转化，扶贫教育师生。">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+                'zcolour1': '#AC8B5C',
+                'zcolour2': '#265043',
+              brand: {
+                50: '#fef2f2',
+                100: '#fee2e2',
+                200: '#fecaca',
+                300: '#fca5a5',
+                500: '#ef4444',
+                600: '#dc2626',
+                700: '#b91c1c',
+                800: '#991b1b',
+                900: '#7f1d1d',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'blob': 'blob 7s infinite',
+              'scroll': 'scroll 1.5s infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateY(0)', opacity: '1' },
+                '100%': { transform: 'translateY(8px)', opacity: '0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Header -->
+    <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Area -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="./images/logo1.png" class="h-52 w-52 object-contain" alt="希望园丁"/>
+                    <!-- <div class="flex flex-col header-text-container text-gray-900 lg:text-white">
+                        <span class="font-bold text-xl leading-none tracking-tight header-text">希望园丁</span>
+                        <span class="text-xs opacity-80 header-subtext">北京市红十字基金会</span>
+                    </div> -->
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium transition-colors text-white/90 hover:text-white nav-link">首页</a>
+                    <a href="#about" class="text-sm font-medium transition-colors text-white/90 hover:text-white nav-link">关于我们</a>
+                    <a href="#goals" class="text-sm font-medium transition-colors text-white/90 hover:text-white nav-link">我们的目标</a>
+                    <a href="#projects" class="text-sm font-medium transition-colors text-white/90 hover:text-white nav-link">成果展示</a>
+                    <a href="#welfareproject" class="text-sm font-medium transition-colors text-white/90 hover:text-white nav-link">公益项目</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-zcolour1/50 text-white hover:bg-zcolour1 contact-btn">联系我们</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white p-2 rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute top-full left-0 w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-50 mobile-link">首页</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-50 mobile-link">关于我们</a>
+                <a href="#goals" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-50 mobile-link">我们的目标</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-50 mobile-link">成果展示</a>
+                <a href="#welfareproject" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-gray-50 mobile-link">公益项目</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <!-- <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" alt="Students learning" class="w-full h-full object-cover"> -->
+                 <img src="./images/bg2.png" alt="Students learning" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
+                <div class="max-w-3xl animate-fade-in-up pt-20">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zcolour1/50 text-white text-xs md:text-sm font-semibold mb-8 tracking-wide uppercase backdrop-blur-sm">
+                        <span class="w-2 h-2 rounded-full bg-zcolour1 animate-pulse"></span>
+                        北京市红十字基金会教育专项基金
+                    </div>
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-white leading-tight">
+                        希望园丁
+                    </h1>
+                    <p class="text-lg md:text-2xl text-gray-100 mb-12 leading-relaxed font-light opacity-90 max-w-2xl">
+                        给基层教师一束光，这束光就会照亮他们的讲台，进而照进学生心里、给很多家庭带去未来和希望
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#about" class="px-10 py-4 rounded-full bg-zcolour1/50 text-white font-semibold text-lg hover:bg-zcolour1 transition-all duration-300 shadow-lg shadow-white/30 flex items-center justify-center gap-2">
+                            了解更多
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m9 18 6-6-6-6"/></svg>
+                        </a>
+                        <a href="#achievements" class="px-10 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:border-white/50 flex items-center justify-center">
+                            查看项目
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50 hidden md:block">
+                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+                    <div class="w-1 h-2 bg-white rounded-full animate-scroll"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="mb-16 lg:mb-0 relative">
+                        <!-- <h2 class="text-white font-bold tracking-widest uppercase text-xs mb-4">关于我们</h2> -->
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">希望园丁</h3>
+                        <div class="prose prose-lg text-gray-600">
+                            <p class="mb-6 leading-relaxed text-justify">
+                                “希望园丁教师关爱工程”是国内部分名师名校长参与发起、以推动基层学校高质量发展、关爱基层教师身心健康和专业成长为宗旨的专项公益活动。作为北京市红十字基金会博爱教育基金管理的公益项目，主要为基层学校和教师提供：办学理念和学校治理咨询，专业/学科名师指导培训；家校协同、儿童青少年心理健康指导、学业生涯规划指导讲座培训；基层教师跨校研修学习；基层校长交流研讨；基层教师健康咨询关爱等服务。作为拥有教育发展头部资源的共享服务平台，“希望园丁”致力于为中国基础教育、职业教育的发展贡献自己的专业力量。
+                            </p>
+                            <!-- <p class="leading-relaxed text-justify">
+                                我们致力于搭建高端教育成果展示平台，连接优质学校、顶尖专家与权威媒体（新华网、人民网、中国教育报等）。我们将先进的教育理念与科学成果转化为实际教学推动力，促进教育公平，提升教学质量，为中国教育事业贡献公益力量。
+                            </p> -->
+                        </div>
+                        
+                       <!--  <div class="mt-10 pt-8 border-t border-gray-100">
+                            <a href="#goals" class="inline-flex items-center text-white font-semibold hover:text-white transition-colors group">
+                                了解我们的愿景 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                        </div> -->
+                    </div>
+
+                    <!-- Image Grid -->
+                    <div class="grid grid-cols-2 gap-4 relative">
+                        <!-- Decorative Element -->
+                        <div class="absolute -top-10 -right-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                        
+                        <img src="./images/pic1.png" alt="Classroom learning" class="rounded-2xl shadow-xl transform translate-y-8 object-cover h-64 w-full grayscale hover:grayscale-0 transition-all duration-500 z-10">
+                        <img src="./images/pic9.png" alt="Teacher explaining" class="rounded-2xl shadow-xl object-cover h-64 w-full grayscale hover:grayscale-0 transition-all duration-500 z-10">
+                        <img src="./images/pic8.png" alt="Library study" class="rounded-2xl shadow-xl object-cover h-64 w-full grayscale hover:grayscale-0 transition-all duration-500 z-10">
+                        <img src="./images/pic3.png" alt="School architecture" class="rounded-2xl shadow-xl transform -translate-y-8 object-cover h-64 w-full grayscale hover:grayscale-0 transition-all duration-500 z-10">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="goals" class="py-32 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <!-- <h2 class="text-white font-bold tracking-widest uppercase text-xs mb-4">我们的目标</h2> -->
+                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">核心使命与愿景</h3>
+                    <p class="max-w-2xl mx-auto text-lg text-gray-500 font-light">
+                        我们也许做不了太多。但我们可以为他们送去一束光。<br/>我们可以走到他们身边，帮他们打开一扇看到更大世界的小窗；<br/>
+                        我们可以帮他们对接一些资源，给他们的职业成长助一把力；<br/>我们可以给他们一些关爱，让他们对职业多一份信心和热情，少一点无助和彷徨。
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Goal 1: 成果展示 (Award) -->
+                    <div class="bg-white rounded-2xl p-10 shadow-sm hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                        <div class="w-16 h-16 bg-zcolour1/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-zcolour1 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1 group-hover:text-white transition-colors duration-300"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">成果展示</h4>
+                        <p class="text-gray-500 leading-relaxed text-sm">
+                            挖掘全国优质学校特色，树立行业标杆，通过权威渠道展示育人成果。
+                        </p>
+                    </div>
+                    <!-- Goal 2: 科研成果转化 (FlaskConical) -->
+                    <div class="bg-white rounded-2xl p-10 shadow-sm hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                        <div class="w-16 h-16 bg-zcolour1/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-zcolour1 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1 group-hover:text-white transition-colors duration-300"><path d="M10 2v7.31"/><path d="M14 2v7.31"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">科研成果转化</h4>
+                        <p class="text-gray-500 leading-relaxed text-sm">
+                            推动教育科学研究成果在实际教学场景中的落地与应用，连接理论与实践。
+                        </p>
+                    </div>
+                    <!-- Goal 3: 教育扶贫 (HeartHandshake) -->
+                    <div class="bg-white rounded-2xl p-10 shadow-sm hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                        <div class="w-16 h-16 bg-zcolour1/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-zcolour1 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1 group-hover:text-white transition-colors duration-300"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="M18 15v2.25a2.75 2.75 0 0 1-5.5 0v-2.25"/><path d="M11 9l-3.81 3.83a2.82 2.82 0 0 0 0 4l2.96 2.68"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">教育扶贫</h4>
+                        <p class="text-gray-500 leading-relaxed text-sm">
+                            定向援助贫困地区师生，提供资源支持与师资培训，助力教育均衡发展。
+                        </p>
+                    </div>
+                    <!-- Goal 4: 权威媒体出口 (Megaphone) -->
+                    <div class="bg-white rounded-2xl p-10 shadow-sm hover:shadow-2xl transition-all duration-300 group border border-gray-100">
+                        <div class="w-16 h-16 bg-zcolour1/30 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-zcolour1 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1 group-hover:text-white transition-colors duration-300"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">权威媒体出口</h4>
+                        <p class="text-gray-500 leading-relaxed text-sm">
+                            携手新华网、中国教育报等顶级媒体，让优秀的教育故事被全社会听见。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <!-- <h2 class="text-white font-bold tracking-widest uppercase text-xs mb-4">公益项目</h2> -->
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">成果展示</h3>
+                        <p class="text-gray-500 text-lg font-light">
+                            我们将每一份爱心转化为实际的教育资源，点亮孩子们的未来。
+                        </p>
+                    </div>
+                    <!-- <a href="#" class="hidden md:flex items-center gap-2 text-white font-semibold hover:text-white transition-colors">
+                        全部项目 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a> -->
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Project 1:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/project1.png" alt="贵州省台江民族中学高考中榜优秀学生助学" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    师资培训
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                                贵州省台江民族中学<br/>高考中榜优秀学生助学
+                            </h4>
+                            <!-- <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                组织城市名师送教下乡，为偏远地区教师提供“影子培训”与远程指导，提升乡村教学质量。
+                            </p> -->
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Project 2:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/project2.png" alt="浙江平湖基础教育调研指导" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    科研转化
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                                浙江平湖基础教育<br/>调研指导
+                            </h4>
+                            <!-- <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                将前沿科技带入校园，捐建科学实验室，激发青少年对科学探索的无限兴趣。
+                            </p> -->
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Project 3:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/project3.png" alt="北京丰台区图书馆组织学校向贵州台江城关五小捐赠图书" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    公益助学
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                               北京丰台区图书馆组织学校向贵州台江城关五小捐赠图书
+                            </h4>
+                            <!-- <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                为品学兼优但家庭困难的学生提供持续经济资助，守护每一个求学梦想，传递社会关爱。
+                            </p> -->
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center md:hidden">
+                    <a href="#" class="inline-flex items-center gap-2 text-white font-semibold hover:text-white">
+                        全部项目 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-24 bg-zcolour1 text-white relative overflow-hidden">
+            <!-- Decorative Background Elements -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-zcolour2/20 rounded-full mix-blend-overlay filter blur-3xl opacity-50 animate-blob"></div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-zcolour2/20 rounded-full mix-blend-overlay filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-zcolour2/20 rounded-full mix-blend-overlay filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-white">用数据见证改变</h3>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+                    <div class="pt-8 lg:pt-0 px-4">
+                        <div class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="23">0</span></div>
+                        <div class="text-lg font-medium text-white mb-1">覆盖省份</div>
+                        <div class="text-sm text-white">公益足迹遍布全国</div>
+                    </div>
+                    <div class="pt-8 lg:pt-0 px-4">
+                        <div class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="50000">0</span>+</div>
+                        <div class="text-lg font-medium text-white mb-1">受益师生</div>
+                        <div class="text-sm text-white">直接受益人数</div>
+                    </div>
+                    <div class="pt-8 lg:pt-0 px-4">
+                        <div class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="120">0</span>+</div>
+                        <div class="text-lg font-medium text-white mb-1">合作名校</div>
+                        <div class="text-sm text-white">优质学校联盟</div>
+                    </div>
+                    <div class="pt-8 lg:pt-0 px-4">
+                        <div class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter" data-target="500">0</span>+</div>
+                        <div class="text-lg font-medium text-white mb-1">媒体报道</div>
+                        <div class="text-sm text-white">主流媒体深度聚焦</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="welfareproject" class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <!-- <h2 class="text-white font-bold tracking-widest uppercase text-xs mb-4">公益项目</h2> -->
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">公益项目</h3>
+                        <p class="text-gray-500 text-lg font-light">
+                           <!--  我们将每一份爱心转化为实际的教育资源，点亮孩子们的未来。 -->
+                        </p>
+                    </div>
+                    <!-- <a href="#" class="hidden md:flex items-center gap-2 text-white font-semibold hover:text-white transition-colors">
+                        全部项目 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a> -->
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-10">
+                    <!-- Project 1:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/welfareproject1.png" alt="微光讲堂" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    师资培训
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                                微光讲堂
+                            </h4>
+                            <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                组织名校名师和社会英才，到基层与教师交流互动
+                            </p>
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Project 2:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/welfareproject2.jpg" alt="小荷工程" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    科研转化
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                                小荷工程
+                            </h4>
+                            <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                优秀基层教师职业成长计划，包括建立外部导师制，线上线下指导，假期到外地学校参观学习、专业交流等
+                            </p>
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Project 3:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/welfareproject3.png" alt="雨露计划" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    公益助学
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                               雨露计划
+                            </h4>
+                            <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                为长期扎根基层教育的优秀教师发放岗位奖励
+                            </p>
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Project 4:  -->
+                    <div class="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="./images/welfareproject4.png" alt="松柏计划" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                            <!-- <div class="absolute bottom-4 left-4">
+                                <span class="bg-white text-white px-3 py-1 rounded text-xs font-bold tracking-wider uppercase shadow-sm">
+                                    公益助学
+                                </span>
+                            </div> -->
+                        </div>
+                        <div class="p-8 flex flex-col flex-grow border-x border-b border-gray-100 rounded-b-xl">
+                            <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-zcolour1 transition-colors text-center">
+                               松柏计划
+                            </h4>
+                            <p class="text-gray-500 mb-8 flex-grow leading-relaxed text-sm">
+                                组织面向基层教师的健康科普、肿瘤早筛等系列健康关爱行动
+                            </p>
+                            <!-- <div class="mt-auto">
+                                <button class="text-gray-900 text-sm font-bold uppercase tracking-wide group-hover:text-white flex items-center gap-2 transition-colors">
+                                    查看详情 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center md:hidden">
+                    <a href="#" class="inline-flex items-center gap-2 text-white font-semibold hover:text-white">
+                        全部项目 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section border-t border-gray-100-->
+        <section class="py-20 bg-gray-50 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-zcolour1 text-xs font-bold uppercase tracking-[0.2em] mb-12">
+                    战略合作与媒体支持
+                </p>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+                    <div class="group relative">
+                        <span class="text-2xl md:text-3xl font-bold text-gray-300 group-hover:text-zcolour1 transition-colors duration-300 cursor-default font-serif">
+                            新华网
+                        </span>
+                        <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-zcolour1 transition-all duration-300 group-hover:w-full"></span>
+                    </div>
+                    <div class="group relative">
+                        <span class="text-2xl md:text-3xl font-bold text-gray-300 group-hover:text-zcolour1 transition-colors duration-300 cursor-default font-serif">
+                            人民网
+                        </span>
+                        <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-zcolour1 transition-all duration-300 group-hover:w-full"></span>
+                    </div>
+                    <div class="group relative">
+                        <span class="text-2xl md:text-3xl font-bold text-gray-300 group-hover:text-zcolour1 transition-colors duration-300 cursor-default font-serif">
+                            中国教育报
+                        </span>
+                        <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-zcolour1 transition-all duration-300 group-hover:w-full"></span>
+                    </div>
+                    <div class="group relative">
+                        <span class="text-2xl md:text-3xl font-bold text-gray-300 group-hover:text-zcolour1 transition-colors duration-300 cursor-default font-serif">
+                            中国教育学会
+                        </span>
+                        <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-zcolour1 transition-all duration-300 group-hover:w-full"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-white text-white pt-16 pb-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand Column -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                       <!--  <div class="bg-white p-1.5 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-white fill-current"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
+                        <span class="font-bold text-xl">希望园丁</span>  -->
+                        <div class="p-1.5">
+                        <!-- Logo Area -->
+                            <a href="#home" class="flex-shrink-0 flex items-center gap-2 group">
+                                <img src="./images/logo1.png" class="w-36 object-contain" alt="希望园丁"/>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        北京市红十字基金会教育专项基金。<br />
+                        汇聚爱心，点亮希望，让每一个孩子都能享受优质教育。
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">快速链接</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-zcolour1 transition-colors">关于我们</a></li>
+                        <li><a href="#projects" class="hover:text-zcolour1 transition-colors">成果展示</a></li>
+                        <li><a href="#welfareproject" class="hover:text-zcolour1 transition-colors">公益项目</a></li>
+                        <li><a href="#" class="hover:text-zcolour1 transition-colors">申请资助</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">联系我们</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1"><path d="M20 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>北京市海淀区某某街道123号</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>010-12345678</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zcolour1"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>contact@hopegardener.org</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">订阅动态</h4>
+                    <p class="text-sm text-gray-400 mb-4">
+                        关注我们的最新公益活动与教育成果。
+                    </p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="您的邮箱" class="bg-zcolour1/50 border border-zcolour1 text-white px-4 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white0 focus:bg-zcolour1 flex-grow placeholder-white/80">
+                        <button class="bg-zcolour1/50 hover:bg-zcolour1 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                            订阅
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> 希望园丁专项基金. All rights reserved.</p>
+                <!-- <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">隐私政策</a>
+                    <a href="#" class="hover:text-white">使用条款</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
